@@ -35,14 +35,14 @@
   <p align="center">
     Showcases the authors completed projects, experiences, skills and contact details.
     <br />
-    <a href="https://github.com/gurtej154/Textable-project"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/gurtej154/Coinance"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://textable-application.herokuapp.com/">View Demo</a>
+    <a href="">View Demo</a>
     ·
-    <a href="https://github.com/gurtej154/Textable-project/issues">Report Bug</a>
+    <a href="https://github.com/gurtej154/Coinance/issues">Report Bug</a>
     ·
-    <a href="https://github.com/gurtej154/Textable-project/issues">Request Feature</a>
+    <a href="https://github.com/gurtej154/Coinance/issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,33 +77,30 @@
 
 ## About The Project
 
-As a Developer of a Progressive Web Application, I would like to create a text editing webapp for programmers and coders to write or insert their code. This will allow the user to save the code and come back to it later on with the feature of working offline without an internet connection.
+Coinance is a coin tracking application for all those crypto enthusiasts out there to manage and assess their coins or for new users to gain knowledge and understanding of the prices of the coins.
+Almost all coins are listed in the application for users to assess and add to their dashboard, with live price and market coverage from efficient API’s providers such as Coin-gecko.
 
 ## Mock Up
 
-The following animation demonstrates the application functionality:
-
-![Demonstration of the finished Unit 19 Homework being used in the browser and then installed.](./Assets/00-demo.gif)
-
-The following image shows the application's `manifest.json` file:
-
-![Demonstration of the finished Unit 19 Homework with a manifest file in the browser.](./Assets/01-manifest.png)
-
-The following image shows the application's registered service worker:
-
-![Demonstration of the finished Unit 19 Homework with a registered service worker in the browser.](./Assets/02-service-worker.png)
-
-The following image shows the application's IndexedDB storage:
-
-![Demonstration of the finished Unit 19 Homework with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
+Mock-up coming soon!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
+The following dependencies, frameworks, libraries, plugins are implemented into the application which allow it to execute the functionalities and purposes it was designed for.
+
+- [Mongo](https://www.mongodb.com/)
 - [Express](https://expressjs.com/)
+- [React](https://reactjs.org/)
 - [Node](https://nodejs.org/en/)
-- [Webpack](https://webpack.js.org/)
+- [GraphQL](https://graphql.org/)
+- [Apollo](https://www.apollographql.com/)
+- [JWT](https://jwt.io/)
+- [Postcss](https://www.google.com/search?q=postcss&oq=postcss&aqs=chrome.0.69i59j0i67l6j69i60.2041j0j7&sourceid=chrome&ie=UTF-8)
+- [Tailwind](https://jwt.io/)
+- [Autoprefixer](https://tailwindcss.com/docs/using-with-preprocessors)
+- [Coingecko](https://www.coingecko.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -122,7 +119,7 @@ None at this stage
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/gurtej154/Textable-project.git
+   git clone https://github.com/gurtej154/Coinance.git
    ```
 
 2. Install NPM packages
@@ -140,6 +137,8 @@ To ulitise this application, the following need to be installed and implemented 
 
 - Npm init - for node packages
 - Npm install - for multiple packages
+- Npm run build - To develop the front-end
+- Npm start - to initialize the back-end
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -149,7 +148,7 @@ To ulitise this application, the following need to be installed and implemented 
 
 - Constantly updating to current standards
 
-See the [open issues](https://github.com/gurtej154/Textable-project/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/gurtej154/Coinance/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -184,7 +183,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Gurtej Singh - [gurtej154](gurtej154@gmail.com)
 
-Project Link: [Repository](https://github.com/gurtej154/Textable-project.git)
+Project Link: [Repository](https://github.com/gurtej154/Coinance)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
