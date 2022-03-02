@@ -30,7 +30,7 @@
     <img src="/assets/README-Logo.gif" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">Textable</h3>
+<h3 align="center">Coinance</h3>
 
   <p align="center">
     Showcases the authors completed projects, experiences, skills and contact details.
