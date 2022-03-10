@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { useMutation } from '@apollo/client'
 
@@ -6,18 +6,12 @@ import { ADD_USER } from '../../utils/mutations'
 
 import Auth from '../../utils/auth'
 
-import InputField from '../Inputs'
+import InputField from '../InputField'
 
 import Button from '../Button'
 import { useUtils } from '../../hooks/useUtils'
-
-const FormWrapper = ({ children }) => {
-    return (
-        <div className="max-w-md p-10 mt-20  mx-auto border rounded-xl shadow-lg bg-white">
-            {children}
-        </div>
-    )
-}
+import FormWrapper from '../FormWrapper'
+import ToastMessage from '../ToastMessage'
 
 const Signup = () => {
     const [formState, setFormState] = useState({
@@ -42,12 +36,16 @@ const Signup = () => {
 
     const handleFormSubmit = async event => {
         event.preventDefault()
-        console.log(formState)
         try {
             const { data } = await addUser({
                 variables: { ...formState },
             })
 
+            setFormState({
+                username: '',
+                email: '',
+                password: '',
+            })
             Auth.login(data.addUser.token)
         } catch (e) {
             setErrorMessage(e.message)
@@ -55,20 +53,14 @@ const Signup = () => {
         }
     }
 
-    useEffect(() => {
-        if (errorMessage) {
-            let timerId = setTimeout(() => {
-                setErrorMessage('')
-            }, 5000)
-
-            return () => clearTimeout(timerId)
-        }
-    }, [errorMessage])
-
     return (
         <div className="mx-4">
             <FormWrapper>
-                <div className="text-red-400">{errorMessage}</div>
+                <ToastMessage
+                    type="error"
+                    message={errorMessage}
+                    setMessage={setErrorMessage}
+                />
                 <h2 className="text-4xl mb-8 text-center font-medium">
                     Sign Up
                 </h2>

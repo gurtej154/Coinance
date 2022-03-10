@@ -2,24 +2,20 @@ import React, { useState } from 'react'
 import { useMutation } from '@apollo/client'
 import { LOGIN_USER } from '../../utils/mutations'
 
-import InputField from '../Inputs'
+import InputField from '../InputField'
 
 import Auth from '../../utils/auth'
 
 import Button from '../Button'
 import { useUtils } from '../../hooks/useUtils'
-const FormWrapper = ({ children }) => {
-    return (
-        <div className="max-w-md p-10 mt-20 mx-auto border rounded-xl shadow-lg bg-white">
-            {children}
-        </div>
-    )
-}
+import FormWrapper from '../FormWrapper'
+import ToastMessage from '../ToastMessage'
 
 const Login = props => {
     const [formState, setFormState] = useState({ email: '', password: '' })
     const { setIsLoginMode } = useUtils()
     const [login, { error, data }] = useMutation(LOGIN_USER)
+    const [errorMessage, setErrorMessage] = useState('')
 
     const handleChange = event => {
         const { name, value } = event.target
@@ -33,7 +29,7 @@ const Login = props => {
     // submit form
     const handleFormSubmit = async event => {
         event.preventDefault()
-        console.log(formState)
+
         try {
             const { data } = await login({
                 variables: { ...formState },
@@ -45,6 +41,7 @@ const Login = props => {
                 password: '',
             })
         } catch (e) {
+            setErrorMessage(e.message)
             console.error(e)
         }
     }
@@ -52,9 +49,11 @@ const Login = props => {
     return (
         <div className="mx-4">
             <FormWrapper>
-                <div className="text-center text-red-400">
-                    {error && error.message}
-                </div>
+                <ToastMessage
+                    type="error"
+                    message={errorMessage}
+                    setMessage={setErrorMessage}
+                />
                 <h2 className="text-4xl mb-8 text-center font-medium">Login</h2>
                 <form onSubmit={handleFormSubmit}>
                     <InputField
