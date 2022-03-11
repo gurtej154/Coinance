@@ -82,7 +82,9 @@ Almost all coins are listed in the application for users to assess and add to th
 
 ## Mock Up
 
-Mock-up coming soon!
+![gif](/client/public/Live-demo.gif)![image](/client/public/Still-mode.png)
+
+![image](/client/public/Laptop-mode.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
