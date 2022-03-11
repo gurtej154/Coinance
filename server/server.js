@@ -1,9 +1,9 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
-require("dotenv").config();
-// require("dotenv").config({ path: path.resolve(__dirname, ".env") });
-console.log(process.env.MONGODB_URI);
+// require("dotenv").config();
+require("dotenv").config({ path: path.resolve(__dirname, ".env") });
+// console.log(process.env.MONGODB_URI);
 
 const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
