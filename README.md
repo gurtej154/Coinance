@@ -26,14 +26,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/gurtej154/Textable-project">
+  <a href="https://github.com/gurtej154/Coinance">
     <img src="/client/public/README-Logo.gif" alt="Logo" width="100" height="100">
   </a>
 
 <h3 align="center">Coinance</h3>
 
   <p align="center">
-    Showcases the authors completed projects, experiences, skills and contact details.
+    A MERNG Stack application that allows users to add any crypto currencies to their personal dashboard.
     <br />
     <a href="https://github.com/gurtej154/Coinance"><strong>Explore the docs »</strong></a>
     <br />
